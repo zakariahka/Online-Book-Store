@@ -1,0 +1,26 @@
+ * Environment: development
+ * Debug mode: on
+Traceback (most recent call last):
+  File "/opt/anaconda3/bin/flask", line 8, in <module>
+    sys.exit(main())
+  File "/opt/anaconda3/lib/python3.9/site-packages/flask/cli.py", line 994, in main
+    cli.main(args=sys.argv[1:])
+  File "/opt/anaconda3/lib/python3.9/site-packages/flask/cli.py", line 600, in main
+    return super().main(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.9/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/opt/anaconda3/lib/python3.9/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/anaconda3/lib/python3.9/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/anaconda3/lib/python3.9/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.9/site-packages/click/decorators.py", line 84, in new_func
+    return ctx.invoke(f, obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.9/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.9/site-packages/flask/cli.py", line 853, in run_command
+    run_simple(
+  File "/opt/anaconda3/lib/python3.9/site-packages/werkzeug/serving.py", line 984, in run_simple
+    s.bind(server_address)
+OSError: [Errno 48] Address already in use

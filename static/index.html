@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hello, world!</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+<main>
+    <!-- Promo Banner-->
+    <header class="site-header sticky-top py-1">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-3">
+            </div>
+            <div class="col-6 text-center banner-txt">
+                <strong class="blog-header-logo flex-nowrap">Limited time offer, buy 5 get one 50% off</strong>
+            </div>
+            <!-- Check out button-->
+            <div class="col-2 justify-content-end align-items-center">
+                <label class="text-light" id="number-of-books-in-cart">0</label>
+                <svg class="bi bi-cart shopping-icon" fill="currentColor" height="16" viewBox="0 0 16 16"
+                     width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <button class="btn btn-success btn-sm opacity-100" id="checkout-button"
+                        onclick="window.location.href='checkout.html';">Checkout
+                </button>
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- Welcome -->
+    <section class="py-1 text-center container-lg">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light text-nowrap">Welcome to the Best Online Book Store</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category buttons-->
+    <div class="container-lg text-center">
+        <div class="row" id="categories-row">
+            <a aria-label="Book" class="py-2 col">
+                <svg class="d-block mx-auto" fill="none" height="24" role="img" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                     xmlns="http://www.w3.org/2000/svg"><title>Book</title>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+                </svg>
+            </a>
+            <div class="col" id="trending-category"><a class="btn btn-link col">Trending</a></div>
+            <div class="col" id="all-books-category"><a class="btn btn-link col">All</a></div>
+            <!-- Categories are appended here-->
+        </div>
+    </div>
+
+    <!-- Books-->
+    <div class="album py-5 bg-light">
+        <div class="container-md">
+            <!-- Books will be added here -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="books-row">
+
+            </div>
+        </div>
+    </div>
+</main>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+
+<!-- Book template-->
+<div class="col" hidden="true" id="hidden-book">
+    <div class="card shadow-sm">
+        <!--   <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Book Thumbnail</text></svg>
+         -->
+        <div class="text-center">
+            <img class="rounded card-img-top mt-1" style='height: 100%; width: 100%; object-fit: contain'>
+        </div>
+        <div class="card-body">
+            <div class="text-center"><strong class="book-name card-text">Name</strong></div>
+
+            <p class="book-author card-text text-center">Author.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button class="add-book-button btn btn-sm btn-outline-secondary" type="button">Add</button>
+                    <button class="remove-book-button btn btn-sm btn-outline-secondary" type="button">Remove</button>
+                </div>
+                 <small class="book-price text-muted">$19</small>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

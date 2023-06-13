@@ -1,0 +1,11 @@
+.container {
+  max-width: 960px;
+}
+
+.product-description {
+  display: block;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
